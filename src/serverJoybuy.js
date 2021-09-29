@@ -3,6 +3,7 @@ let express = require("express");
 let app = express();
 app.use(express.json());
 app.set("view engine", "ejs");
+app.use(express.static('public'))
 let mongoose = require("mongoose");
 let connect=()=> {
     return mongoose.connect("mongodb://127.0.0.1:27017/joybuy_clone")
