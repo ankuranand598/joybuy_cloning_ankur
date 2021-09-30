@@ -2,8 +2,12 @@ const { request, response } = require("express");
 let express = require("express");
 let app = express();
 app.use(express.json());
+const path = require("path");
 app.set("view engine", "ejs");
-app.use(express.static('public'))
+//app.use(express.static('public'));
+app.set("/views",path.join(__dirname,"views"))
+app.use("/static",express.static(path.join(__dirname,'../public')));
+app.use(express.urlencoded({extended:false}));
 let mongoose = require("mongoose");
 let connect=()=> {
     return mongoose.connect("mongodb://127.0.0.1:27017/joybuy_clone")
