@@ -37,11 +37,38 @@ app.get("/products", async (request, response) => {
     });
     //return response.status(200).send({detail})
 })
+
 app.get("/products/:id", async (request, response) => {
     let detail = await Product.findById(request.params.id).lean().exec();
     response.render("productDetail.ejs", {
         detail
     });
+})
+//login
+let loginSection = new mongoose.Schema({
+    email_address:{type:String,required:true} ,
+    password: { type: String, required: true },
+   confirm:{ type: String, required: true },
+    code: { type: String, required: true },
+    company: { type: String, required: true },
+    country: { type: String, required: true },
+    first_name: { type: String, required: true },
+    last_name: { type: String, required: true }
+   
+}, {
+    versionKey: false,
+    timestamps:true
+})
+let Login= mongoose.model("login",loginSection)
+app.post("/login", async (request, response) => {
+    let detail = await Login.create(request.body);
+    return response.status(201).send({detail})
+})
+app.get("/login", async (request, response) => {
+    let detail = await Login.find().lean().exec();
+    response.render("login.ejs", {
+        detail
+    })
 })
 app.listen(3434, async () => {
     await connect();
