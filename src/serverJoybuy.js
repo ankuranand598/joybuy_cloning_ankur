@@ -27,9 +27,9 @@ app.post("/products", async (request, response) => {
 })
 app.get("/products", async (request, response) => {
     let detail = await Product.find().lean().exec();
-    detail.forEach(({_id}) => {
-        console.log(_id)
-    })
+    // detail.forEach(({_id}) => {
+    //     console.log(_id)
+    // })
     response.render("homepage.ejs", {
         detail
     });
@@ -37,9 +37,9 @@ app.get("/products", async (request, response) => {
 })
 app.get("/products/:id", async (request, response) => {
     let detail = await Product.findById(request.params.id).lean().exec();
-    response.render("productDetail", {
+    response.render("productDetail.ejs", {
         detail
-    })
+    });
 })
 app.listen(3434, async () => {
     await connect();
