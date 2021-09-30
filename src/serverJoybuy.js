@@ -9,9 +9,7 @@ app.set("/views",path.join(__dirname,"views"))
 app.use("/static",express.static(path.join(__dirname,'../public')));
 app.use(express.urlencoded({extended:false}));
 let mongoose = require("mongoose");
-let connect=()=> {
-    return mongoose.connect("mongodb://127.0.0.1:27017/joybuy_clone")
-};
+let connect=require("./configs/db")
 //product,
 let productSection = new mongoose.Schema({
     prod_name:{type:String,required:true} ,
