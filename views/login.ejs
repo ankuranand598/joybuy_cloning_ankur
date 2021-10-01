@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/homepage.css" />
+  </head>
+  <body>
+    <div id="head">
+      <img
+        id="logo2"
+        src="https://img10.joybuy.com/tuangou/jfs/t1/24107/24/11739/7795/5c924d58Eae30ea8a/815e2989f4164d36.png"
+        alt=""
+      />
+    </div>
+    <div id="loginForm">
+      <div style="height: 20px"></div>
+      <div id="form">
+        <h2
+          style="font-family: sans-serif; margin-left: 10%; margin-top: 35px"
+        >
+          Log in
+        </h2>
+          <textarea class="email" type="email" placeholder="Email address" id="email" ></textarea>
+          <br />
+          <textarea class="psaaword" type="password" placeholder="Password" id="password" /></textarea>
+          <br />
+          <h5 style="margin-left: 63%;color: blue;">Forgot your password?</h5>
+          <button id="butt1" type="submit" onclick="loginUser(<%=JSON.stringify(detail)%>)">Log in</button>
+        
+        <h6 style="color: gray; text-align: center;margin-top: 50px;">or log in using</h6>
+        
+      </div>
+    </div>
+    <div style="margin-top: 100px;width: 100%;height: 300px;background-color: rgb(212, 211, 211);">
+      <div class="terms" >
+        <div>
+<i class="fa fa-credit-card" style="font-size:78px;color:grey;margin-left: 45px;"></i>
+<br/>
+<h3 style="font-family: sans-serif;">Secure Payments</h3>
+<br/>
+<p style="color: grey;font-family: sans-serif;">Pay with secure payment methods</p>
+</div>
+        <div>
+<i class="fa fa-exchange" style="font-size:78px;color:grey;margin-left: 45px;"></i>
+<br/>
+<h3>Secure Payments</h3>
+<br/>
+<p style="color: grey;font-family: sans-serif;">Pay with secure payment methods</p>
+</div>
+        <div>
+<i class="fa fa-headphones" style="font-size:78px;color:grey;margin-left: 45px;"></i>
+<br/>
+<h3 style="font-family: sans-serif;">Secure Payments</h3>
+<br/>
+<p style="color: grey;font-family: sans-serif;">Pay with secure payment methods</p>
+</div>
+        <div>
+<i class="fa fa-plane" style="font-size:78px;color:grey;margin-left: 45px;"></i>
+<br/>
+<h3 style="font-family: sans-serif;">Secure Payments</h3>
+<br/>
+<p style="color: grey;font-family: sans-serif;">Pay with secure payment methods</p>
+</div>
+      </div>
+    <h6 style="text-align: center;font-family: sans-serif;margin-top: 100px;">Copyright © 2016-2021 Jd.com. All Rights Reserved</h6>
+    </div>
+  </body>
+</html>
+<script>
+  function loginUser(ele){
+    let email=document.getElementById("email").value;
+    
+    let password1=document.getElementById("password").value;
+    // console.log(email)
+    // console.log(ele)
+    ele.forEach(({email_address,password}) => {
+      if(email_address===email){
+        if(password==password1){
+          window.location.href="http://localhost:3434/products";
+        }else{
+          alert("invalid credentials!!!...")
+        }
+      }else{
+        window.location.href="localhost:3434/signup"
+      }
+    });
+  }
+</script>

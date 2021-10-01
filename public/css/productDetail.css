@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#head {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+}
