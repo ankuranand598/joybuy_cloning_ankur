@@ -195,3 +195,8 @@
 .shadow:hover {
   box-shadow: 1px 1px 2px 2px silver;
 }
+#logo3 {
+  display: flex;
+  border-bottom: 2px solid orangered;
+  height: 80px;
+}

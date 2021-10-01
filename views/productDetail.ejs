@@ -25,6 +25,10 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/static/css/homepage.css" />
   </head>
   <body>
@@ -70,11 +74,80 @@
         </ul>
       </div>
     </div>
-    <div id="logo2">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div id="logo3">
+      <div style="margin-left: 40px">
+        <img
+          src="https://img13.joybuy.com/devfe/jfs/t12529/75/1661573614/7068/95ad6bf/5a24dfe9N3e8f15d1.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <p style="margin-left: 40px; font-size: larger">
+          <span class="material-icons" style="margin-top: 4px"> menu </span>
+          <span>Categories</span>
+        </p>
+      </div>
+
+      <div id="input-box" style="margin-left: 40px">
+        <!-- <p>ALL<span class="caret"></span></p> -->
+        <div id="all" class="dropdown">
+          <p class="dropdown-toggle orangeRed" data-toggle="dropdown">
+            ALL<span class="caret"></span>
+          </p>
+          <ul class="dropdown-menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Phones & Accessessories</a></li>
+            <li><a href="#">Computers & Office</a></li>
+            <li><a href="#">Consumer Electronics</a></li>
+            <li><a href="#">Women's Clothing</a></li>
+            <li><a href="#">Men's Clothing</a></li>
+            <li><a href="#">Shoes & Bags</a></li>
+            <li><a href="#">Home & Garden</a></li>
+            <li><a href="#">Sports & Outdoors</a></li>
+            <li><a href="#">Health & Beauty</a></li>
+            <li><a href="#">Toys, Kids & Baby</a></li>
+            <li><a href="#">Food</a></li>
+          </ul>
+        </div>
+        <input type="text" placeholder="Search.." name="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <div id="login">
+        <p class="orangeRed">
+          <i
+            class="fa fa-shopping-cart"
+            style="font-size: 25px; color: orangered"
+          ></i
+          >Cart
+        </p>
+        <p onclick="gotologin()" class="orangeRed">
+          <span
+            class="glyphicon glyphicon-user"
+            style="font-size: 18px; color: orangered"
+          ></span
+          >My Account
+        </p>
+      </div>
+    </div>
+    <div
+      id="nav"
+      style="
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(206, 195, 195);
+        text-align: center;
+        font-family: sans-serif;
+      "
+    >
+      <div>
+        <p>HOME > Consumer > Electronics > Audio & Video > Headphones</p>
+      </div>
+      <div>
+        <p>
+          <i class="fas fa-heart"></i>Joy Collection | Follow Us |
+          <i class="fas fa-mail-bulk" style="font-size: 16px"></i>EMAIL
+        </p>
+      </div>
     </div>
   </body>
 </html>
