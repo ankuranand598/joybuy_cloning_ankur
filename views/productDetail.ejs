@@ -149,6 +149,33 @@
         </p>
       </div>
     </div>
+    <div id="productDetail">
+      <div>
+        <div style="height: 300px; width: 50%; margin-left: 10%">
+          <img
+            style="height: 250px; width: 100%"
+            src="<%=detail.image[0]%>"
+            alt=""
+          />
+        </div>
+        <div style="display: flex">
+          <div>
+            <img src="<%=detail.image[1]%>" alt="" />
+          </div>
+          <div>
+            <img src="<%=detail.image[2]%>" alt="" />
+          </div>
+          <div>
+            <img src="<%=detail.image[3]%>" alt="" />
+          </div>
+          <div><img src="<%=detail.image[0]%>" alt="" /></div>
+        </div>
+      </div>
+      <div>
+        <h4><%= detail.prod_name%></h4>
+        <p><%= detail.prod_price%></p>
+      </div>
+    </div>
   </body>
 </html>
 <script></script>
